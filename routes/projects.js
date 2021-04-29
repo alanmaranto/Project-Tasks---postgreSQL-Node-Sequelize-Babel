@@ -1,7 +1,8 @@
-import { Router } from 'express';
-//import controller
-const router = Router()
+import { Router } from "express";
+import { Project } from "../controllers";
 
-// router.[method]('/', Controller.fn)
+const router = Router();
 
-export default router
+router.post("/", Project.createProject);
+
+export default router;
